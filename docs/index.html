@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <title>华层家装 - 一站式智慧家装云平台</title>
+  <style>
+    html,
+    body,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+    }
+
+    #app>.bg {
+      position: fixed;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-image: url(./img/bg.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #app>.bg:after {
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 20, 20, .1);
+      z-index: 0;
+    }
+
+    #app>.header {
+      position: fixed;
+      left: 0;
+      right: 0;
+      margin: auto;
+      top: 0;
+      width: 100%;
+      max-width: 1200px;
+      padding: 20px;
+      box-sizing: border-box;
+      color: #fff;
+      text-align: left;
+      font-size: 24px;
+    }
+
+    #app>.header>.img {
+      width: 120px;
+      height: 60px;
+      vertical-align: middle;
+      background-image: url(./img/logo.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    #app>.header>span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    #app>.inside {
+      width: 100%;
+      max-width: 1200px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    #app>.inside>.p-0 {
+      font-size: 40px;
+      -webkit-text-stroke: 1px #fff;
+      letter-spacing: 5px;
+    }
+
+    #app>.inside>.p-1 {
+      font-size: 16px;
+      margin-top: 10px;
+      color: #fff;
+      opacity: .6;
+      letter-spacing: 5px;
+    }
+
+    #app>.inside>.p-2 {
+      margin-top: 20px;
+    }
+
+    #app>.inside>.p-2>button {
+      padding: 10px 20px;
+      background-color: #ff6a00;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      letter-spacing: 5px;
+    }
+
+    #model {
+      display: none;
+    }
+
+    #model>.bg {
+      position: fixed;
+      z-index: 11;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, .5);
+      width: 100%;
+      height: 100%;
+    }
+
+    #model>.center {
+      position: fixed;
+      z-index: 12;
+      left: 50%;
+      top: 50%;
+      width: 200px;
+      height: 200px;
+      transform: translate(-50%, -50%);
+    }
+
+    #model>.center>img {
+      width: 100%;
+      height: 100%;
+    }
+
+    #app>.footer {
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+      max-width: 1200px;
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+      box-sizing: border-box;
+      opacity: .8;
+    }
+
+    #app>.footer>a {
+      color: #ff6a00;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="bg"></div>
+    <div class="header">
+      <span class="img"></span>
+    </div>
+    <div class="inside">
+      <p class="p-0">一站式智慧家装云平台</p>
+      <p class="p-1">空间数字化、720°全景VR、所见即所得</p>
+      <p class="p-2">
+        <button onclick="showModel()">咨询服务</button>
+      </p>
+    </div>
+
+    <div id="model">
+      <div class="bg" onclick="hideModel()"></div>
+      <div class="center">
+        <img src="./img/wx-xx.png" alt="">
+      </div>
+    </div>
+
+    <div class="footer">
+      HUACENG.COM © 2019-<span id="year"></span>
+    </div>
+  </div>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear()
+
+    function showModel() {
+      document.getElementById('model').style.display = 'block'
+    }
+    function hideModel() {
+      document.getElementById('model').style.display = 'none'
+    }
+
+  </script>
+</body>
+
+</html>
