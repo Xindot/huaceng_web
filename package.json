@@ -1,23 +1,23 @@
 {
-    "name": "huaceng-web",
-    "version": "1.0.0",
-    "description": "A Html Project",
-    "author": "",
-    "license": "MIT",
-    "private": true,
-    "scripts": {
-      "dev": "cd docs && anywhere -s",
-      "pubGit": "git status && git add -A && git status && git commit -am 'gx' && git status && git push origin master && git status"
-    },
-    "dependencies": {},
-    "devDependencies": {},
-    "engines": {
-      "node": ">= 4.0.0",
-      "npm": ">= 3.0.0"
-    },
-    "browserslist": [
-      "> 1%",
-      "last 2 versions",
-      "not ie <= 8"
-    ]
-  }
+  "name": "huaceng-web",
+  "version": "1.0.0",
+  "description": "A Html Project",
+  "author": "",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "cd docs && anywhere -s",
+    "gitPush": "git status && git add -A && git status && git commit -am 'gx' && git status && git push origin master && git status"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
